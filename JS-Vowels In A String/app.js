@@ -3,10 +3,12 @@ const textarea = document.querySelector("#vowelstextarea");
 const message = document.querySelector(".messagearea");
 const btn = document.querySelector("button");
 
+//! ADDEVENT LISTENER:
 btn.addEventListener("click", () => {
   message.innerHTML = vowels(textarea.value);
 });
 
+//! FUNCTION:
 const vowels = (sentence) => {
   let sent = sentence.toLowerCase();
   let counter = 0;
@@ -21,5 +23,5 @@ const vowels = (sentence) => {
       counter++;
     }
   }
-  return `There are ${counter} vowels in ${sentence} `;
+  return `There are ${counter} vowels in ${sent} `;
 };
