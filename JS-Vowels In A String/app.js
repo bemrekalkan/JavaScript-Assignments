@@ -1,8 +1,25 @@
 //! SELECTORS:
 const textarea = document.querySelector("#vowelstextarea");
 const message = document.querySelector(".messagearea");
-const btn = document.querySelector(".button");
+const btn = document.querySelector("button");
 
-btn.addEventListener("click", () => {});
+btn.addEventListener("click", () => {
+  message.innerHTML = vowels(textarea.value);
+});
 
-const vowels = (sentence) => {};
+const vowels = (sentence) => {
+  let sent = sentence.toLowerCase();
+  let counter = 0;
+  for (let i = 0; i < sentence.length; i++) {
+    if (
+      sent[i] == "a" ||
+      sent[i] == "e" ||
+      sent[i] == "i" ||
+      sent[i] == "u" ||
+      sent[i] == "o"
+    ) {
+      counter++;
+    }
+  }
+  return `There are ${counter} vowels in ${sentence} `;
+};
