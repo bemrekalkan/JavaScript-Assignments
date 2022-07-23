@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-column-start: auto;
+
+  align-items: left;
+  border: 3px solid blue;
+  padding: 2rem;
+}
+
+.red {
+  background-color: red;
+  color: white;
+  font-style: italic;
+  font-weight: 600;
+  float: left;
+  margin: auto;
+  padding: 2rem;
+}
